@@ -17,7 +17,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class Prices {
 
-    @Id
+    @NotNull
     private int brandId;
 
     @NotNull
@@ -29,7 +29,7 @@ public class Prices {
     @NotNull
     private int priceList;
 
-    @NotNull
+    @Id
     private int productId;
 
     @NotNull
