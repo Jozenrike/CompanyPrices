@@ -1,9 +1,25 @@
 spring:
   application:
-    name: Rated Power Challenge
+    name: Company prices
 
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:in-memory-db;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=false;DB_CLOSE_ON_EXIT=false;
+    url: jdbc:h2:mem:testbd;DB_CLOSE_DELAY=-1;DATABASE_TO_UPPER=true;DB_CLOSE_ON_EXIT=false;
     username: sa
-    password: sa
+    password:
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    database: h2
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+
+  sql:
+    init:
+      mode: always

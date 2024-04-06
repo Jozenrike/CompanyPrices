@@ -1,6 +1,6 @@
-package com.example.ComparnyPrices.infrastructure.controller;
+package com.example.CompanyPrices.infrastructure.controller;
 
-import com.example.ComparnyPrices.application.service.PricesService;
+import com.example.CompanyPrices.application.service.PricesService;
 import com.example.infrastructure.controller.api.PricesApi;
 import com.example.infrastructure.controller.model.PriceResponseDTO;
 import lombok.RequiredArgsConstructor;
@@ -12,7 +12,7 @@ import java.time.OffsetDateTime;
 
 @RestController
 @RequiredArgsConstructor
-public class PostsController implements PricesApi {
+public class PricesController implements PricesApi {
 
     private final PricesService pricesService;
 

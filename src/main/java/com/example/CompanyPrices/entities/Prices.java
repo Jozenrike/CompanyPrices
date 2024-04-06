@@ -1,4 +1,4 @@
-package com.example.ComparnyPrices.entities;
+package com.example.CompanyPrices.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -6,12 +6,11 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
-import java.util.Date;
+import java.time.OffsetDateTime;
 
 @Entity
 @Table(name= "PRICES")
-@Getter
-@Setter
+@Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
@@ -21,10 +20,10 @@ public class Prices {
     private int brandId;
 
     @NotNull
-    private Date startDate;
+    private OffsetDateTime startDate;
 
     @NotNull
-    private Date endDate;
+    private OffsetDateTime endDate;
 
     @NotNull
     private int priceList;

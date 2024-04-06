@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: Swagger Account Integration - OpenAPI 3.0
+  title: Swagger Prices Integration - OpenAPI 3.0
   description: |-
     RatedPower crud api rest challenge.
   termsOfService: http://swagger.io/terms/
@@ -15,7 +15,7 @@ tags:
   - name: Posts and comments
     description: Operations about posts and comments
 paths:
-  /prices/search':
+  /prices:
     summary: Operation over specific object in Prices collection
     description: 'Operations to search price fees'
     get:
@@ -26,19 +26,19 @@ paths:
           in: query
           schema:
             type: integer
-          required: false
+          required: true
         - name: brandId
           in: query
           schema:
             type: integer
-          required: false
+          required: true
         - name: applyDate
           in: query
           schema:
             type: string
             format: date-time
-          required: false
-          example: "2024-01-24T17:32:28Z"
+          required: true
+          example: "2024-01-24-17.32.28"
 
       responses:
         '200':

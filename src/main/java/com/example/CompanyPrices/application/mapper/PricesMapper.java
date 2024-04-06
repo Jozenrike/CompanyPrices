@@ -1,13 +1,14 @@
-package com.example.ComparnyPrices.application.mapper;
+package com.example.CompanyPrices.application.mapper;
 
-import com.example.ComparnyPrices.entities.Prices;
+import com.example.CompanyPrices.entities.Prices;
 import com.example.infrastructure.controller.model.PriceResponseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Named;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
-import java.util.Date;
+import java.time.ZoneOffset;
 
 @Mapper(componentModel= "spring")
 public interface PricesMapper {
@@ -24,8 +25,12 @@ public interface PricesMapper {
         return priceEntity.getPrice() + priceEntity.getCurr();
     }
 
-    default Date setDate(OffsetDateTime applyDate, boolean isStart){
-        return new Date();
+    default OffsetDateTime setDate(OffsetDateTime applyDate, boolean isStart){
+        return LocalDateTime.now().atOffset(ZoneOffset.UTC);
+    }
+
+    default String setDate(OffsetDateTime date){
+        return date.toString();
     }
 
 }
