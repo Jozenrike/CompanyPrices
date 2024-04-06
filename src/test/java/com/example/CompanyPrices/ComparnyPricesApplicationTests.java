@@ -1,4 +1,4 @@
-package com.example.ComparnyPrices;
+package com.example.CompanyPrices;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
