@@ -1,12 +1,12 @@
-package com.example.CompanyPrices.entities;
+package com.example.CompanyPrices.domain.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
+import org.hibernate.annotations.Generated;
 
 import java.time.OffsetDateTime;
+import java.util.UUID;
 
 @Entity
 @Table(name= "PRICES")
@@ -15,6 +15,10 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Prices {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
 
     @NotNull
     private int brandId;
@@ -28,7 +32,7 @@ public class Prices {
     @NotNull
     private int priceList;
 
-    @Id
+    @NotNull
     private int productId;
 
     @NotNull

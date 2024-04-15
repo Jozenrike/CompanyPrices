@@ -1,7 +1,7 @@
 package com.example.CompanyPrices.application;
 
 import com.example.CompanyPrices.application.mapper.PricesMapper;
-import com.example.CompanyPrices.entities.Prices;
+import com.example.CompanyPrices.domain.entity.Prices;
 import com.example.infrastructure.controller.model.PriceResponseDTO;
 import org.jeasy.random.EasyRandom;
 import org.junit.jupiter.api.Test;
