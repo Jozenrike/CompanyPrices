@@ -1,8 +1,8 @@
 package com.example.CompanyPrices.application;
 
 import com.example.CompanyPrices.application.service.PricesService;
-import com.example.CompanyPrices.entities.Prices;
-import com.example.CompanyPrices.infrastructure.repository.PricesRepository;
+import com.example.CompanyPrices.domain.entity.Prices;
+import com.example.CompanyPrices.domain.repository.PricesRepository;
 import com.example.infrastructure.controller.model.PriceResponseDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

@@ -1,6 +1,6 @@
 package com.example.CompanyPrices.application.mapper;
 
-import com.example.CompanyPrices.entities.Prices;
+import com.example.CompanyPrices.domain.entity.Prices;
 import com.example.infrastructure.controller.model.PriceResponseDTO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
